@@ -1,0 +1,8 @@
+# Distribution package
+xterm-express-*.tgz
+
+# Git files
+.git
+
+# Dependency directory
+node_modules

@@ -1,0 +1,54 @@
+{
+  "name": "xterm-express",
+  "version": "0.0.1",
+  "description": "Xterm Express is a web based terminal which is not just limited to ssh.",
+  "license": "MIT",
+  "author": "Santosh Kumar Gupta <santosh0705@gmail.com> (https://github.com/santosh0705)",
+  "main": "index.js",
+  "bin": "./bin/xterm-express",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/santosh0705/xterm-express.git"
+  },
+  "scripts": {
+    "start": "node ./bin/xterm-express",
+    "clean": "rimraf ./client ./xterm-express-*.tgz",
+    "lint": "eslint *.js libs/*.js src/*.js",
+    "build": "npm run clean && npm run lint && webpack --mode production --progress --colors",
+    "build:dev": "npm run clean && npm run lint && webpack --mode development --progress --colors",
+    "build:dist": "npm run build && npm pack"
+  },
+  "dependencies": {
+    "compression": "^1.7.2",
+    "debug": "^3.1.0",
+    "express": "^4.16.3",
+    "fs": "0.0.1-security",
+    "http-errors": "^1.6.3",
+    "morgan": "~1.9.0",
+    "net": "^1.0.2",
+    "node-pty": "^0.7.4",
+    "pug": "^2.0.3",
+    "socket.io": "^2.1.0",
+    "xterm": "^3.3.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "css-loader": "^0.28.11",
+    "eslint": "^4.19.1",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.7.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "file-loader": "^1.1.11",
+    "node-sass": "^4.8.3",
+    "sass-loader": "^7.0.1",
+    "webpack": "^4.5.0",
+    "webpack-cli": "^2.0.14",
+    "webpack-merge": "^4.1.2"
+  }
+}

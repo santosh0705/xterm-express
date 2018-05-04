@@ -1,0 +1,120 @@
+$black: #000;
+$translucent: rgba(0, 0, 0, 0.6);
+$white: #fff;
+$error: #D8000C;
+$borderColor: #ccc;
+$buttonColor: #2196F3;
+$buttonColorHover: #0b7dda;
+$fsMenuColor: rgba(255, 255, 255, 0.2);
+$fsMenuColorHover: #555;
+
+html {
+  background-color: $black;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-size: 1rem;
+}
+
+input[type=button] {
+  color: $white;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border: 0;
+  border-radius: 5px;
+  background-color: $buttonColor;
+
+  &:hover {
+    background-color: $buttonColorHover;
+  }
+
+}
+
+.error {
+  color: $error;
+}
+
+#overlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  color: $black;
+  background-color: $translucent;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 500;
+
+  #modal {
+    align-self: center;
+    margin-left: 20px;
+    margin-right: 20px;
+    min-width: 300px;
+    background-color: $white;
+    border: 1px solid $borderColor;
+    border-radius: 5px;
+
+    #modal_header {
+      border-bottom: 1px solid $borderColor;
+      padding: 1rem 1rem 1rem 3.2rem;
+      margin: 0;
+      background-image: url(xterm.png);
+      background-repeat: no-repeat;
+      background-position: 1rem 1rem;
+    }
+
+    #modal_content {
+      padding: 1rem;
+    }
+
+    #modal_btns {
+      padding: 1rem;
+      text-align: center;
+    }
+  }
+}
+
+#terminal {
+  height: 100%;
+  width: 100%;
+}
+
+#fs_btn {
+  display: none;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 32px;
+  height: 32px;
+  z-index: 499;
+  text-decoration: none;
+  border-radius: 5px;
+  background-color: $fsMenuColor;
+  background-image: url(fs.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  &:hover {
+    background-color: $fsMenuColorHover;
+  }
+}
+
+.flip {
+  -moz-transform: scaleY(-1);
+  -o-transform: scaleY(-1);
+  -webkit-transform: scaleY(-1);
+  transform: scaleY(-1);
+  filter: FlipY;
+  -ms-filter: "FlipY";
+} 
+
+@import '~xterm/lib/xterm';

@@ -1,0 +1,28 @@
+{
+  "listen": {
+    "port": 3000,
+    "ip": "127.0.0.1"
+  },
+  "cache": {
+    "age": 3600000
+  },
+  "terminal": {
+    "cursorBlink": true,
+    "cursorStyle": "underline",
+    "scrollback": 1000,
+    "tabStopWidth": 8,
+    "bellStyle": "sound"
+  },
+  "service": {
+    "/": {
+      "command": "/bin/login"
+    },
+    "/ssh/": {
+      "cwd": "{HOME}",
+      "env": {},
+      "askusername": true,
+      "command": "/usr/bin/ssh",
+      "args": ["{USERNAME}@localhost"]
+    }
+  }
+}

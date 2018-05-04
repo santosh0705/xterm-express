@@ -1,0 +1,11 @@
+doctype html
+html
+  head
+    title= message
+  body
+    center
+      h1= message
+    if error.stack
+      pre #{error.stack}
+    hr
+    center #{application.name}/#{application.version}

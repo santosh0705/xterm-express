@@ -1,0 +1,16 @@
+doctype html
+html
+  head
+    title Xterm Express.
+    block head
+      link(rel='stylesheet', href=webRoot + 'stylesheets/style-bundle.css')
+      script(src=webRoot + 'javascripts/client-bundle.js')
+  body
+    div(id='overlay')
+      div(id='modal')
+        h2(id='modal_header')
+        div(id='modal_content')
+        div(id='modal_btns')
+          input(id='reconnect_btn' type='button' value='Reconnect')
+    div(id='terminal')
+    a(id='fs_btn' href='#' title='Toggle fullscreen')

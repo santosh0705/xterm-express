@@ -1,0 +1,8 @@
+# Transpile files directory
+client
+
+# Distribution package
+xterm-express-*.tgz
+
+# Dependency directory
+node_modules
