@@ -62,10 +62,10 @@ var fullscreen = {
   },
 
   toggle: () => {
-    if (this.isFullScreen()) {
-      this.exit()
+    if (fullscreen.isFullScreen()) {
+      fullscreen.exit()
     } else {
-      this.request()
+      fullscreen.request()
     }
   },
 
