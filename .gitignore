@@ -6,3 +6,6 @@ xterm-express-*.tgz
 
 # Dependency directory
 node_modules
+
+# Log files
+npm-debug.log
