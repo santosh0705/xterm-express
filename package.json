@@ -1,6 +1,6 @@
 {
   "name": "xterm-express",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Xterm Express is a web based terminal which is not just limited to ssh.",
   "license": "MIT",
   "author": "Santosh Kumar Gupta <santosh0705@gmail.com> (https://github.com/santosh0705)",
