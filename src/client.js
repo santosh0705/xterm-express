@@ -7,7 +7,7 @@ import './style.scss'
 
 import io from 'socket.io-client'
 import { Terminal } from 'xterm'
-import * as fit from 'xterm/lib/addons/fit'
+import * as fit from 'xterm/lib/addons/fit/fit'
 
 function hideOverlay () {
   overlay.self.style.display = 'none'
