@@ -17,7 +17,6 @@
     "lint": "eslint *.js lib/*.js src/*.js",
     "build": "npm run clean && npm run lint && webpack --mode production --progress --colors",
     "build:dev": "npm run clean && npm run lint && webpack --mode development --progress --colors",
-    "build:dev1": "npm run clean && webpack --mode development --progress --colors",
     "build:dist": "npm run build && npm pack"
   },
   "dependencies": {
