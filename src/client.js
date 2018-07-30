@@ -195,11 +195,9 @@ function startTerminal () {
       if (data) disconnect(data)
     })
     .on('terminal options', data => {
-      term.setOption('cursorBlink', data.cursorBlink || true)
-      term.setOption('cursorStyle', data.cursorStyle || 'block')
-      term.setOption('scrollback', data.scrollback || 1000)
-      term.setOption('tabStopWidth', data.tabStopWidth || 8)
-      term.setOption('bellStyle', data.bellStyle || 'sound')
+      Object.keys(data).forEach(function (key) {
+        term.setOption(key, data[key])
+      })
     })
     .on('data', data => term.write(data))
     .on('title', data => { document.title = data })
